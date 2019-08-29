@@ -21,11 +21,11 @@
     margin-top: 15px;
     margin-left: -40px;
 "><a href="https://github.com/tarikmanoar/CRUD-usig-OOP-PHP" style="
-    background: #ddd;
+    background: #000;
     display: block;
     padding: 5px;
     text-align: center;
-"><i class="fa fa-code-fork" ></i>FORK</a></div>
+"><i class="fa fa-code-fork" ></i>&nbsp;FORK</a></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -41,10 +41,10 @@
 						<div class="card-body">
 								<?php 
 									if (isset($_GET['msg'])) {
-										echo "<h1 class='text-success'>Medicine Store Successful!</h1>";
+										echo "<h1 class='text-success text-uppercase'>Medicine Store Successful!</h1>";
 									}
 									if (isset($_GET['umsg'])) {
-										echo "<h1 class='text-success'>Medicine UPDATE Successful!</h1>";
+										echo "<h1 class='text-success text-uppercase'>UPDATE Successful!</h1>";
 									}
 									if (isset($_GET['edit'])) {
 										$id  = $_GET['id'] ?? NULL;
@@ -53,6 +53,7 @@
 
 									<form action="classes/action.php" method="POST" accept-charset="utf-8">
 										<table class="table table-hover">
+											<a href="index.php" class="btn btn-info"><i class="fa fa-angle-double-left"></i></a>
 											<tbody>
 												<tr>
 													<td><input type="hidden" class="form-control" name="id" value="<?php echo $id?>"></td>
@@ -113,11 +114,13 @@
 						<tbody>
 							<?php 
 								$myrow = $obj->fetch_record("medicine");
+								$c = "";
 								foreach ($myrow as $row) {
+									$c++;
 									?>
 
 							<tr>
-								<td><?php echo $row['id'] ?></td>
+								<td><?php echo $c;?></td>
 								<td><?php echo $row['name'] ?></td>
 								<td><?php echo $row['qty'] ?></td>
 								<td class="text-center">
