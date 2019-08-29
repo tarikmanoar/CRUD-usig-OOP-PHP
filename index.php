@@ -13,6 +13,19 @@
 		<title>Hello, world!</title>
 	</head>
 	<body>
+		<div class="github" style="
+    position: fixed;
+    transform: rotate(-45deg);
+    width: 151px;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: -40px;
+"><a href="https://github.com/tarikmanoar/CRUD-usig-OOP-PHP" style="
+    background: #ddd;
+    display: block;
+    padding: 5px;
+    text-align: center;
+"><i class="fa fa-code-fork" ></i>FORK</a></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
