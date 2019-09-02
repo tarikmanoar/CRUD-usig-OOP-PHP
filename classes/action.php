@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include "DB.php";
 class DataOperation extends Database{
 	
@@ -78,6 +79,7 @@ if (isset($_POST['submit'])) {
 		"qty" => $_POST['qty']
 	];
 	if ($obj->insert_data("medicine",$array)) {
+        $_SESSION['message'] = "<div class='alert alert-success'>Medicine Insert Successful!</div>";
 		header("Location: ../index.php?msg=Success");
 	}
 
@@ -91,6 +93,7 @@ if (isset($_POST['update'])) {
 		"qty" => $_POST['qty']
 	];
 	if ($obj->update_data("medicine",$where,$array)) {
+        $_SESSION['message'] = "<div class='alert alert-info'>Medicine Update Successful!</div>";
 		header("Location: ../index.php?umsg=Success");
 	}
 
@@ -100,6 +103,7 @@ if (isset($_GET['delete'])) {
 	$id = $_GET['id'] ?? null;
 	$where = ["id"=>$id];
 	if ($obj->delete_data("medicine",$where)) {
+        $_SESSION['message'] = "<div class='alert alert-danger'>Medicine Insert Successful!</div>";
 		header("Location: index.php?dmsg=Success");
 	}
 
