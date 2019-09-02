@@ -30,7 +30,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="jumbotron text-uppercase text-center">
-						<h1 class="display-1">Medicine Strore</h1>
+						<h1 class="display-1">Medicine Store</h1>
 					</div>
 				</div>
 			</div>
