@@ -19,7 +19,7 @@
 	class Database{
 		public $dbconn;
 	    public function __construct(){
-	        $this->dbconn= new mysqli("localhost","root","","oop");
+	        $this->dbconn= new mysqli("localhost","root","","php_oop");
 	        if($this->dbconn){
 		    	// echo 'SUCCESS';
 		    }else{
